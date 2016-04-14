@@ -3,23 +3,16 @@ teams:
     collection: frontend-repos
     configuration: slow-render
     video: default
-    members:
-      - name: ktamas77
-      - name: someone
-      - name: otherperson
+    members: [ktamas77, someone, otherperson]
   - name: team2
     collection: backend-repos
     configuration: fast-render
     video: default
-    members:
-      - name: someothername
-      - name: ktamas77
+    members: [someothername, ktamas77]
 
 collections:
-  - name: super team
+  - name: frontend-repos
     organization: betacorp
-    configuration: fast-render
-    video: default
     repos:
       - name: frontend-website
       - name: logger
