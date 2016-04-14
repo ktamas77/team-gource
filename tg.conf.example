@@ -1,0 +1,42 @@
+teams:
+  - name: main team
+    collection: frontend-repos
+    configuration: slow-render
+    video: default
+    members:
+      - name: ktamas77
+      - name: someone
+      - name: otherperson
+  - name: team2
+    collection: backend-repos
+    configuration: fast-render
+    video: default
+    members:
+      - name: someothername
+      - name: ktamas77
+
+collections:
+  - name: super team
+    organization: betacorp
+    configuration: fast-render
+    video: default
+    repos:
+      - name: frontend-website
+      - name: logger
+      - name: monitoring
+  - name: backend-repos
+    organization: unicorp
+    repos:
+      - name: logservice
+      - name: userservice
+      - name: microservice
+
+configurations:
+  - name: slow-render
+    config: -s 0.001 --highlight-users --highlight-dirs --hide-filenames --camera-mode overview -key --padding 1.28 --user-scale 2.0 --date-format "%Y.%m.%d" --font-size 24 --dir-name-depth 1
+  - name: fast-render
+    config: gource -s 0.3 --highlight-users
+
+video:
+  - name: default
+    config: ffmpeg -y -r 60 -f image2pipe -vcodec ppm -vcodec libx264 -preset ultrafast -pix_fmt yuv420p -crf 1 -threads 0 -bf 0
