@@ -4,6 +4,7 @@ teams:
     configuration: slow-render
     video: default
     members: [ktamas77, someone, otherperson]
+    excluded: [automated-script, garbage-collector]
   - name: team2
     collection: backend-repos
     configuration: fast-render

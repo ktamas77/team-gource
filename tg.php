@@ -11,7 +11,14 @@ function updateRepo($org, $repo) {
     if (!is_dir('repos')) {
         mkdir('repos');
     }
-    exec("git clone git@github.com:$org/$repo.git repos/$repo");
+    if (!is_dir("repos/$repo")) {
+        exec("git clone git@github.com:$org/$repo.git repos/$repo");
+    } else {
+        $currentDir = getcwd();
+        chdir("repos/$repo");
+        exec("git pull origin master");
+        chdir($currentDir);
+    }
 }
 
 $teams = $config['teams'];
