@@ -97,7 +97,11 @@ function filterNonMembersFromLog($logName, $members) {
 function sortMasterLog($masterLog) {
     $logData = file($masterLog, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
     asort($logData);
-    file_put_contents($masterLog, print_r($logData, true));
+    $newData = "";
+    foreach ($logData as $line) {
+        $newData .= $line . "\n";
+    }
+    file_put_contents($masterLog, $newData);
 }
 
 $teams = $config['teams'];
