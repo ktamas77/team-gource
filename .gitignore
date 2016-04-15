@@ -1,4 +1,5 @@
 .idea/
 repos/
 logs/
+tmp/
 tg.conf

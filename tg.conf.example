@@ -3,13 +3,19 @@ teams:
     collection: frontend-repos
     configuration: slow-render
     video: default
-    members: [ktamas77, someone, otherperson]
+    members:
+        - name: Tamas
+          aliases: [ktamas77, Tamas Kalman, ktamas77@gmail.com]
+        - name: John
+          aliases: [john123, John Doe, john@mail.com]
     excluded: [automated-script, garbage-collector]
   - name: team2
     collection: backend-repos
     configuration: fast-render
     video: default
-    members: [someothername, ktamas77]
+    members:
+        - name: Smith
+          aliases: [smith123, Smith, smith@mail.com]
 
 collections:
   - name: frontend-repos
