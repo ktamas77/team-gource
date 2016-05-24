@@ -1,11 +1,14 @@
 #!/usr/bin/php
 <?php
 
-// Team Gource Command Line Utility
-// Author: Tamas Kalman <ktamas77@gmail.com>
-// Web: https://github.com/ktamas77/team-gource
 
-$config = yaml_parse(file_get_contents('tg.conf'));
+/**
+ * Team Gource Command Line Utility
+ * @author: Tamas Kalman <ktamas77@gmail.com>
+ * @web: https://github.com/ktamas77/team-gource
+ */
+
+$config = yaml_parse(file_get_contents(__DIR__ . 'tg.conf'));
 
 function updateRepo($org, $repo) {
     if (!is_dir('repos')) {

@@ -49,5 +49,9 @@ collections: # collection of repositories; each connection can be added to a tea
 After you finished editing the configuration file, simple run `php tg.php`. 
 Then run Gource with the generated file.
 
+### Next up
+
+* Optimized / Streamlined Plug-in style data processing
+* Integrated Data Visualization Configuration + Gource Render
 
 
