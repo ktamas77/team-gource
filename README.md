@@ -9,6 +9,11 @@ This tool will help you to visualize an *entire organization's* activities throu
 brew install gource ffmpeg
 ```
 
+## How to install:
+```
+composer require ktamas77/team-gource
+```
+
 ### Configuration example
 
 You need to rename the given `tg.conf.example` file into `tg.conf`, then edit the file.
