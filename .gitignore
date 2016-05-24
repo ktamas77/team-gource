@@ -3,3 +3,4 @@ repos/
 logs/
 tmp/
 tg.conf
+/vendor/

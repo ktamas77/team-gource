@@ -1,0 +1,13 @@
+{
+    "name": "ktamas77/team-gource",
+    "description": "Gource Visualization for your entire Organization",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tamas Kalman",
+            "email": "ktamas77@gmail.com"
+        }
+    ],
+    "require": {}
+}
