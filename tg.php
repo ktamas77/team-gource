@@ -118,13 +118,14 @@ foreach ($teams as $team) {
     print "Team: $teamName\n";
     print "Collection: $teamCollection\n";
     $repos = $config['collections'];
-    $members = $team['members'];
+    $members = $team['members'] ?: [];
     foreach ($repos as $repo) {
         if ($repo['name'] === $teamCollection) {
             $teamOrg = $repo['organization'];
             $teamRepos = $repo['repos'];
             $masterLog = tempnam("tmp/", "gource-master-log-$teamCollection");
-            foreach ($teamRepos as $repoName) {
+            foreach ($teamRepos as $teamRepo) {
+                $repoName = $teamRepo['name'];
                 print "updating repository for $repoName\n";
                 updateRepo($teamOrg, $repoName);
                 print "extracting logs for $repoName\n";
