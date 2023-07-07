@@ -8,7 +8,7 @@
  * @web: https://github.com/ktamas77/team-gource
  */
 
-$config = yaml_parse(file_get_contents(__DIR__ . 'tg.conf'));
+$config = yaml_parse(file_get_contents(__DIR__ .DIRECTORY_SEPARATOR .'tg.conf'));
 
 function updateRepo($org, $repo) {
     if (!is_dir('repos')) {
